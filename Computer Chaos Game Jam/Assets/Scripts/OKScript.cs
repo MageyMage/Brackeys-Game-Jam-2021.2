@@ -8,19 +8,38 @@ public class OKScript : MonoBehaviour
 
     public Sprite pressedSprite;
     public Sprite unpressedSprite;
+	public SpriteRenderer sr;
 
-    public Button okButton;
+    private bool selected;
+	private bool clickedOn;
 
-    void Start ()
-    {
-        Button btn = okButton.GetComponent<Button>();
-        btn.onClick.AddListener(taskOnClick);
+	void Update(){
+	
+		if (selected == true){
+			sr.sprite = pressedSprite;
+		}
+
+		if (clickedOn == true){
+			Debug.Log("ok");
+		}
+
+		if(Input.GetMouseButtonUp(0)){
+			selected = false;
+			sr.sprite = unpressedSprite;
+		}
 	}
 
-    void taskOnClick()
-    {
-        Debug.Log("fjdsklafjdsalk");
+	void OnMouseOver(){
+	
+		if(Input.GetMouseButtonDown(0)){
+			selected = true;
+		}
+
+		if(Input.GetMouseButtonUp(0)){
+			clickedOn = true;
+		}
 	}
 }
+
 
     
