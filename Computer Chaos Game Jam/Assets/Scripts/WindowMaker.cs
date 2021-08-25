@@ -9,6 +9,8 @@ public class WindowMaker : MonoBehaviour
 
     public GameObject okWindow;
     public Vector3 spawnPosition;
+    public GameObject ProgressBar;
+    public GameObject WindowManager;
     public int ClickCounter;
 
     public void AddWindow()
@@ -27,7 +29,7 @@ public class WindowMaker : MonoBehaviour
 
         if(ClickCounter >= 10)
         {
-            Debug.Log("Start Chaos");
+            WindowManager.GetComponent<WindowManager>().LetThereBeChaos();
         }
     }
 

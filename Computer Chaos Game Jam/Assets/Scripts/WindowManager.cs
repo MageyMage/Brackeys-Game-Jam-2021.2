@@ -49,5 +49,12 @@ public class WindowManager : MonoBehaviour
            0f
         );
     }
+
+    public void LetThereBeChaos()
+    {
+        ProgressBar.SetActive(true);
+        Debug.Log("CHAOS!!!!!");
+        // this is where we can start popping up the actual mini games
+    }
   
 }

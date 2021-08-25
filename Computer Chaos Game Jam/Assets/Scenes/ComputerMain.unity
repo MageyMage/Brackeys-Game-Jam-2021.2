@@ -747,6 +747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   okWindow: {fileID: 417128470}
   spawnPosition: {x: 0, y: 0, z: 0}
+  ProgressBar: {fileID: 1786021285}
   ClickCounter: 0
 --- !u!1 &841431199
 GameObject:
