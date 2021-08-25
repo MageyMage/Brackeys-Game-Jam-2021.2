@@ -5,14 +5,12 @@ using UnityEngine.UI;
 
 public class WindowManager : MonoBehaviour
 {
-    
     //script to handle spawing windows
 
     public GameObject firstOKWindow;
     public GameObject okWindow;
+    public GameObject ProgressBar;
     private Vector3 spawnPosition;
-
-    public BoxCollider2D windowArea;
 
     private bool addListener = false;
     private GameObject okWindowInstance;
@@ -22,27 +20,19 @@ public class WindowManager : MonoBehaviour
 
     void Start()
     {
+        ProgressBar.SetActive(false);
         buttonGameObject = firstOKWindow.transform.GetChild(0).gameObject;
 
         okButton = buttonGameObject.GetComponent<Button>();
         okButton.onClick.AddListener(SpawnOKWindow);
     }
 
-
-    void Update()
-    {
-       
-    }
-
     public void SpawnOKWindow(){
-
         spawnPosition = RandomPointInBounds();
         okWindowInstance = Instantiate(okWindow, spawnPosition, Quaternion.identity) as GameObject;
-        Debug.Log("Spawning Window, pos: " + spawnPosition.ToString());
+        Debug.Log("Spawning Window, at pos: " + spawnPosition.ToString());
         okWindowInstance.transform.SetParent(GameObject.FindGameObjectWithTag("canvasy").transform, false);
-        
-        addButtonListener(okWindowInstance);
-	}
+    }
 
     
     public void addButtonListener(GameObject okWindowInstance){
@@ -59,4 +49,5 @@ public class WindowManager : MonoBehaviour
            0f
         );
     }
+  
 }
