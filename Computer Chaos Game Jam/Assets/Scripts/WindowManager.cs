@@ -35,10 +35,10 @@ public class WindowManager : MonoBehaviour
     }
 
     public void SpawnOKWindow(){
-        
-        Debug.Log("Spawning Window");
-        spawnPosition = new Vector3(0.0f, 0.0f, 0.0f);
-        okWindowInstance = Instantiate(okWindow, RandomPointInBounds(windowArea.bounds), Quaternion.identity) as GameObject;
+
+        spawnPosition = RandomPointInBounds();
+        okWindowInstance = Instantiate(okWindow, spawnPosition, Quaternion.identity) as GameObject;
+        Debug.Log("Spawning Window, pos: " + spawnPosition.ToString());
         okWindowInstance.transform.SetParent(GameObject.FindGameObjectWithTag("canvasy").transform, false);
         
         addButtonListener(okWindowInstance);
@@ -49,11 +49,13 @@ public class WindowManager : MonoBehaviour
         okButton = okWindowInstance.transform.GetChild(0).gameObject.GetComponent<Button>();
         okButton.onClick.AddListener(SpawnOKWindow);
 	}
-
-    public static Vector3 RandomPointInBounds(Bounds bounds) {
+    //minimum x is -94 maximum x is 96
+    //maximum y is 45 minimum y is -37
+    //idk why but the box colliders numbers are really low
+    public static Vector3 RandomPointInBounds() {
         return new Vector3(
-           Random.Range(bounds.min.x, bounds.max.x),
-           Random.Range(bounds.min.y, bounds.max.y),
+           Random.Range(-94, 96),
+           Random.Range(-37, 45),
            0f
         );
     }
