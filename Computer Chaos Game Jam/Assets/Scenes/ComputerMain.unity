@@ -748,7 +748,19 @@ MonoBehaviour:
   okWindow: {fileID: 417128470}
   spawnPosition: {x: 0, y: 0, z: 0}
   ProgressBar: {fileID: 1786021285}
+  WindowManager: {fileID: 0}
   ClickCounter: 0
+--- !u!114 &735275936 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4520983602125652503, guid: 4f60a5f9442d8dc48a77321c5dd35ec4, type: 3}
+  m_PrefabInstance: {fileID: 1764829796}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735275930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e181ccd81b29cd479e4df7479289623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &841431199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,10 +1157,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4520983602125652500, guid: 4f60a5f9442d8dc48a77321c5dd35ec4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4520983602125652500, guid: 4f60a5f9442d8dc48a77321c5dd35ec4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520983602125652500, guid: 4f60a5f9442d8dc48a77321c5dd35ec4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4520983602125652500, guid: 4f60a5f9442d8dc48a77321c5dd35ec4, type: 3}
@@ -1156,7 +1172,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 735275932}
     - target: {fileID: 4520983602125652500, guid: 4f60a5f9442d8dc48a77321c5dd35ec4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 735275936}
+    - target: {fileID: 4520983602125652500, guid: 4f60a5f9442d8dc48a77321c5dd35ec4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520983602125652500, guid: 4f60a5f9442d8dc48a77321c5dd35ec4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4520983602125652500, guid: 4f60a5f9442d8dc48a77321c5dd35ec4, type: 3}
@@ -1164,15 +1188,26 @@ PrefabInstance:
       value: AddWindow
       objectReference: {fileID: 0}
     - target: {fileID: 4520983602125652500, guid: 4f60a5f9442d8dc48a77321c5dd35ec4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DestroyWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520983602125652500, guid: 4f60a5f9442d8dc48a77321c5dd35ec4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: WindowMaker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520983602125652500, guid: 4f60a5f9442d8dc48a77321c5dd35ec4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: OKWindowClose, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4520983602125652500, guid: 4f60a5f9442d8dc48a77321c5dd35ec4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4520983602125652503, guid: 4f60a5f9442d8dc48a77321c5dd35ec4, type: 3}
+    - target: {fileID: 4520983602125652500, guid: 4f60a5f9442d8dc48a77321c5dd35ec4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f60a5f9442d8dc48a77321c5dd35ec4, type: 3}
 --- !u!1 &1786021285
 GameObject:

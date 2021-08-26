@@ -20,7 +20,7 @@ public class WindowManager : MonoBehaviour
 
     void Start()
     {
-        ProgressBar.SetActive(false);
+        ProgressBar.SetActive(true);
         buttonGameObject = firstOKWindow.transform.GetChild(0).gameObject;
 
         okButton = buttonGameObject.GetComponent<Button>();
