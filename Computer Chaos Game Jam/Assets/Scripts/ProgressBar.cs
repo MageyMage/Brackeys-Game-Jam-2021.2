@@ -34,9 +34,9 @@ public class ProgressBar : MonoBehaviour
             FailedEndScreen.SetActive(true);
 
             GameObject[] windowArray = GameObject.FindGameObjectsWithTag("window");
-            for(int i = 0; i < windowArray.Length-1; i++)
+            foreach(GameObject window in windowArray)
             {
-                Destroy(windowArray[1]);
+                Destroy(window);
             }
             
         }
