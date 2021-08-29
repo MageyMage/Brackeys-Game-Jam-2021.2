@@ -6,6 +6,7 @@ TagManager:
   tags:
   - canvasy
   - window
+  - OKwindowParent
   layers:
   - Default
   - TransparentFX
