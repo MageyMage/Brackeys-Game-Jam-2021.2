@@ -11,27 +11,18 @@ public class WindowMaker : MonoBehaviour
     public Vector3 spawnPosition;
     public GameObject ProgressBar;
     public GameObject WindowManager;
-    public RectTransform okwindowTranfrom;
-    public int ClickCounter;
 
     public void AddWindow()
     {
         int i = 0;
-        ClickCounter++;
-        while (i < Random.Range(1, 2)) // repeats
+        while (i < Random.Range(2, 3)) // repeats
         {
             //spawns a button
             spawnPosition = RandomPointInBounds();
             GameObject okWindowInstance = Instantiate(okWindow, spawnPosition, Quaternion.identity) as GameObject;
             okWindowInstance.transform.SetParent(GameObject.FindGameObjectWithTag("canvasy").transform, false);
-            okwindowTranfrom.SetAsFirstSibling();
+            okWindowInstance.transform.SetAsFirstSibling();
             i++;
-        }
-
-
-        if(ClickCounter >= 10)
-        {
-            WindowManager.GetComponent<WindowManager>().LetThereBeChaos();
         }
 
         ProgressBar.GetComponent<ProgressBar>().DecreaseFill();

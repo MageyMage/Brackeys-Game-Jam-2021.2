@@ -45,6 +45,7 @@ public class ProgressBar : MonoBehaviour
         {
             VictoryEndSceen.SetActive(true);
         }
+
     }
     
     public void DecreaseFill()

@@ -1799,7 +1799,6 @@ MonoBehaviour:
   spawnPosition: {x: 0, y: 0, z: 0}
   ProgressBar: {fileID: 841431199}
   WindowManager: {fileID: 2121852433}
-  okwindowTranfrom: {fileID: 417128471}
   ClickCounter: 0
 --- !u!114 &735275934 stripped
 MonoBehaviour:
@@ -2664,7 +2663,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1710146124}
-        m_TargetAssemblyTypeName: SliderControllerEnd, Assembly-CSharp
+        m_TargetAssemblyTypeName: SliderController, Assembly-CSharp
         m_MethodName: OnClick_
         m_Mode: 1
         m_Arguments:
@@ -3526,13 +3525,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1710146122}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 522e97377bff2154aa28fe15dfa1e577, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a299f941244d7046bde44a3409d3928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MathSlider: {fileID: 1581798988}
   MathQuestion: {fileID: 1710146122}
   ProgressBar: {fileID: 841431199}
   mathTransform: {fileID: 1710146123}
+  NextMathQuestion: {fileID: 1855139178}
   CorrectAnswer: 3
 --- !u!114 &1710146125
 MonoBehaviour:
@@ -3637,7 +3637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4520983602004630571, guid: 4f60a5f9442d8dc48a77321c5dd35ec4, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4520983602004630571, guid: 4f60a5f9442d8dc48a77321c5dd35ec4, type: 3}
       propertyPath: m_AnchorMax.x

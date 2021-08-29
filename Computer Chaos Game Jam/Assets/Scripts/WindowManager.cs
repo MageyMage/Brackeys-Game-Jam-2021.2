@@ -14,6 +14,7 @@ public class WindowManager : MonoBehaviour
     public GameObject Math7x4;
     public GameObject Math2x8;
     public GameObject Math5x6;
+    public int ClickCount = 0;
 
     void Start()
     {
@@ -39,6 +40,16 @@ public class WindowManager : MonoBehaviour
 
         Debug.Log("CHAOS!!!!!");
         // this is where we can start popping up the actual mini games
+    }
+
+    public void AddClick()
+    {
+        ClickCount++;
+
+        if(ClickCount >= 10)
+        {
+            LetThereBeChaos();
+        }
     }
   
 }
