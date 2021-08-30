@@ -10,27 +10,23 @@ public class WindowManager : MonoBehaviour
     public GameObject FailedEndScreen;
     public GameObject Email;
     public GameObject VictoryEndScreen;
-    public GameObject Math9x7;
-    public GameObject Math7x4;
-    public GameObject Math2x8;
-    public GameObject Math5x6;
+    public GameObject MathQuestion;
     public int ClickCount = 0;
+    public Vector3 spawnPosition;
 
     void Start()
     {
         FailedEndScreen.SetActive(false);
         VictoryEndScreen.SetActive(false);
         ProgressBar.SetActive(false);
-        Math9x7.SetActive(false);
-        Math7x4.SetActive(false);
-        Math2x8.SetActive(false);
-        Math5x6.SetActive(false);
         Email.SetActive(true);
     }
 
     public void LetThereBeChaos()
     {
-        Math9x7.SetActive(true);
+        spawnPosition = RandomPointInBounds();
+        GameObject MathQuestionInstance = Instantiate(MathQuestion, spawnPosition, Quaternion.identity) as GameObject;
+        MathQuestionInstance.transform.SetParent(GameObject.FindGameObjectWithTag("canvasy").transform, false);
 
         GameObject[] windowArray = GameObject.FindGameObjectsWithTag("window");
         for (int i = 0; i < windowArray.Length; i++)
@@ -51,5 +47,16 @@ public class WindowManager : MonoBehaviour
             LetThereBeChaos();
         }
     }
-  
+
+    public static Vector3 RandomPointInBounds()
+    {
+        //max x: -15 min x: -85
+        //max y: 12 min y: 2
+        return new Vector3(
+           Random.Range(-85, -15),
+           Random.Range(2, 12),
+           0f
+        );
+    }
+
 }

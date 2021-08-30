@@ -7,6 +7,7 @@ TagManager:
   - canvasy
   - window
   - OKwindowParent
+  - ProgressBar
   layers:
   - Default
   - TransparentFX

@@ -32,6 +32,7 @@ public class WindowMaker : MonoBehaviour
     //minimum x is -200 maximum x is 100
     //maximum y is 100 minimum y is -85
     //idk why but the box colliders numbers are really low
+    //min max numbers are off
     public static Vector3 RandomPointInBounds()
     {
         return new Vector3(
