@@ -17,7 +17,7 @@ public class SliderController : MonoBehaviour
         {
             GameObject ProgressBar = GameObject.Find("ProgressBar");
             GameObject WindowManager = GameObject.Find("StuffManager");
-            ProgressBar.GetComponent<ProgressBar>().DecreaseFillMore();
+            ProgressBar.GetComponent<ProgressBar>().DecreaseFill(20);
             WindowManager.GetComponent<WindowManager>().CreateMathWindow();
             Destroy(MathQuestion);
         }

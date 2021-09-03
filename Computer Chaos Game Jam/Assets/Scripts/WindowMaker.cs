@@ -7,12 +7,13 @@ using UnityEngine.UI;
 public class WindowMaker : MonoBehaviour
 {
 
-    public GameObject WindowManager;
+    public GameObject OkWindow;
 
     public void AddWindow()
     {
-
+        GameObject WindowManager = GameObject.Find("StuffManager");
         WindowManager.GetComponent<WindowManager>().CreateOkWindow();
+        Destroy(OkWindow);
 
     }
 

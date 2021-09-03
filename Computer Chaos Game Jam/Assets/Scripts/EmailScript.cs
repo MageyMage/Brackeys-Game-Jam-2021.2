@@ -12,8 +12,6 @@ public class EmailScript : MonoBehaviour
 
     void Start()
     {
-        ProgressBar.SetActive(false);
-        Email.SetActive(true);
     }
 
     public void OnClick_()
@@ -24,6 +22,6 @@ public class EmailScript : MonoBehaviour
     void ActivateGame()
     {
         ProgressBar.SetActive(true);
-        FirstOkWindow.SetActive(true);
+        WindowManager.GetComponent<WindowManager>().CreateOkWindow();
     }
 }

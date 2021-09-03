@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4520983602125652502}
   - component: {fileID: 4520983602125652501}
   - component: {fileID: 4520983602125652500}
-  - component: {fileID: 4520983602125652503}
+  - component: {fileID: 1704003180009337008}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -197,9 +197,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4520983602125652503}
-        m_TargetAssemblyTypeName: OKWindowClose, Assembly-CSharp
-        m_MethodName: DestroyWindow
+      - m_Target: {fileID: 1704003180009337008}
+        m_TargetAssemblyTypeName: WindowMaker, Assembly-CSharp
+        m_MethodName: AddWindow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -209,7 +209,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4520983602125652503
+--- !u!114 &1704003180009337008
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -218,7 +218,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4520983602125652970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e181ccd81b29cd479e4df7479289623, type: 3}
+  m_Script: {fileID: 11500000, guid: 5336d052b40cedc4a9286e810bea1394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  window: {fileID: 4520983602004630570}
+  WindowManager: {fileID: 0}
+  OkWindow: {fileID: 4520983602004630570}

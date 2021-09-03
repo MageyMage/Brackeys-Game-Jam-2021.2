@@ -43,14 +43,10 @@ public class ProgressBar : MonoBehaviour
 
     }
     
-    public void DecreaseFill()
+    public void DecreaseFill(int decreaseAmount)
     {
-        current -= 6;
+        current -= decreaseAmount; // make sure your inputting a non negative number so it goes down
     }
-
-    public void DecreaseFillMore()
-    {
-        current -= 25;
-    }
+    
 
 }
