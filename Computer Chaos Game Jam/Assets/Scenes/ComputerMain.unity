@@ -1753,9 +1753,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5336d052b40cedc4a9286e810bea1394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  okWindow: {fileID: 417128470}
-  spawnPosition: {x: 0, y: 0, z: 0}
-  ProgressBar: {fileID: 841431199}
   WindowManager: {fileID: 2121852433}
 --- !u!114 &735275934 stripped
 MonoBehaviour:
@@ -2894,9 +2891,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01055c7f63de7a3468565ce02159d301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ErrorWindow: {fileID: 417128470}
   ProgressBar: {fileID: 1786021285}
   Email: {fileID: 1180784807}
+  WindowManager: {fileID: 2121852433}
+  FirstOkWindow: {fileID: 417128470}
 --- !u!114 &1687523501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4136,11 +4134,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150a77b42b4db034dae0330f79426d5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProgressBar: {fileID: 1786021285}
+  ProgressBar: {fileID: 841431199}
+  ProgressBarPopup: {fileID: 1786021285}
   FailedEndScreen: {fileID: 1582174910}
   Email: {fileID: 1180784807}
   VictoryEndScreen: {fileID: 1855139178}
   MathQuestion: {fileID: 2886166400651958400, guid: fd69cab8e954e8345a7fedd2834a18bf, type: 3}
+  okWindow: {fileID: 417128470}
   ClickCount: 0
   spawnPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &2121852435
@@ -4283,6 +4283,10 @@ PrefabInstance:
     - target: {fileID: 2886166401605210026, guid: fd69cab8e954e8345a7fedd2834a18bf, type: 3}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886166401605210026, guid: fd69cab8e954e8345a7fedd2834a18bf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -113.9
       objectReference: {fileID: 0}
     - target: {fileID: 2886166401683356929, guid: fd69cab8e954e8345a7fedd2834a18bf, type: 3}
       propertyPath: m_AnchorMax.x
