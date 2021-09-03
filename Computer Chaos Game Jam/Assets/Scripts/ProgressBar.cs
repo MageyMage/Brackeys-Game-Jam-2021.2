@@ -31,18 +31,14 @@ public class ProgressBar : MonoBehaviour
         if(current >= maximum)
         {
             FailedEndScreen.SetActive(true);
+            FailedEndScreen.transform.SetAsLastSibling();
 
-            GameObject[] windowArray = GameObject.FindGameObjectsWithTag("window");
-            foreach(GameObject window in windowArray)
-            {
-                Destroy(window);
-            }
-            
         }
 
         if(current <= 0)
         {
             VictoryEndSceen.SetActive(true);
+            VictoryEndSceen.transform.SetAsLastSibling();
         }
 
     }

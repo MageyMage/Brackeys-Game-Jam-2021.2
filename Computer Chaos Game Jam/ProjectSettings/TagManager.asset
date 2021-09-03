@@ -8,6 +8,7 @@ TagManager:
   - window
   - OKwindowParent
   - ProgressBar
+  - MathQuestionParent
   layers:
   - Default
   - TransparentFX

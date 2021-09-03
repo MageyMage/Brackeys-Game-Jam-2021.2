@@ -5,14 +5,14 @@ using UnityEngine;
 public class EmailScript : MonoBehaviour
 {
 
-    public GameObject ErrorWindow;
     public GameObject ProgressBar;
     public GameObject Email;
+    public GameObject WindowManager;
+    public GameObject FirstOkWindow;
 
     void Start()
     {
         ProgressBar.SetActive(false);
-        ErrorWindow.SetActive(false);
         Email.SetActive(true);
     }
 
@@ -24,6 +24,6 @@ public class EmailScript : MonoBehaviour
     void ActivateGame()
     {
         ProgressBar.SetActive(true);
-        ErrorWindow.SetActive(true);
+        FirstOkWindow.SetActive(true);
     }
 }
