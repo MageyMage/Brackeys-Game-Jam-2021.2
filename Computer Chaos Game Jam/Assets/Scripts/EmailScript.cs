@@ -22,6 +22,7 @@ public class EmailScript : MonoBehaviour
     void ActivateGame()
     {
         ProgressBar.SetActive(true);
+        FindObjectOfType<AudioManager>().Play("MainTheme");
         WindowManager.GetComponent<WindowManager>().CreateOkWindow();
     }
 }

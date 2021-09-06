@@ -8,6 +8,7 @@ public class ProgressBar : MonoBehaviour
 
     public int maximum;
     public int current = 1;
+    public int increase = 10;
     public GameObject FailedEndScreen;
     public GameObject VictoryEndSceen;
     public Image mask;
@@ -24,7 +25,7 @@ public class ProgressBar : MonoBehaviour
 
     void GetCurrentFill()
     {
-        current += 10;
+        current += increase;
         float fillAmount = (float)current / (float)maximum;
         mask.fillAmount = fillAmount;
 

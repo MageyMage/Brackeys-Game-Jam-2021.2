@@ -23,14 +23,26 @@ public class WindowManager : MonoBehaviour
     //sprites
     public Sprite[] spriteList;
 
+    //changes the increase rate
+    /*
+    var progBarInstance = ProgressBar.GetComponent<ProgressBar>();
+    progBarInstance.increase = 15;
+    */
 
     void Start()
     {
         FailedEndScreen.SetActive(false);
         VictoryEndScreen.SetActive(false);
         ProgressBarPopup.SetActive(false);
+        Email.SetActive(false);
+        Invoke("ActivateEmail", 2);
+    }
+
+    public void ActivateEmail()
+    {
         Email.SetActive(true);
     }
+        
 
     public void LetThereBeChaos()
     {
@@ -56,7 +68,7 @@ public class WindowManager : MonoBehaviour
         GameObject MathQuestionInstance = Instantiate(MathQuestion, spawnPosition, Quaternion.identity) as GameObject;
 
         //changes the sprite
-        int mathQuestionIndex = Random.Range(0, 3);
+        int mathQuestionIndex = Random.Range(0, 4);
         MathQuestionInstance.GetComponent<Image>().sprite = spriteList[mathQuestionIndex];
 
         //changes the correct answer
